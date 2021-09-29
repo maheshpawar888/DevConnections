@@ -1,0 +1,3 @@
+{
+    "mongodbURI" : "mongodb://localhost/devconnections"
+}
