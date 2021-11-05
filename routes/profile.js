@@ -1,6 +1,5 @@
 const express = require('express');
 const auth = require('../middleware/auth');
-const { findOneAndUpdate } = require('../models/Profile');
 const Profile = require('../models/Profile');
 const User = require('../models/User');
 const router = express.Router();
@@ -251,7 +250,6 @@ router.get('/getGithubRepos/:username',( req,res) =>{
             if( response.statusCode !== 200 ){
                 return res.status(404).json({ msg:' No github profile found..!!' })
             }
-            // console.log( JSON.parse( body ) )
             res.json( JSON.parse( body ));
         } )
         
